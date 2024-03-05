@@ -1,0 +1,98 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+body{
+ background: #222;
+}
+.sun{
+ height: 100px;
+ width: 100px;
+ background: linear-gradient(#f1c80d, yellow, orange);
+ box-shadow: 
+ 1px 1px 50px gold,
+ 1px 1px 100px gold,
+ 1px 1px 150px gold,
+ 1px 1px 230px gold
+ ;
+ border-radius: 50%;
+ z-index: 1111;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.main{
+ position: absolute;
+ top:50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.earth{
+ min-height: 200px;
+ border-top: 1px solid grey;
+ border-radius: 50%;
+ min-width: 200px;
+ position: absolute;
+ animation: spin 10s linear infinite;
+}
+.earth::before{
+ content:'';
+ min-height: 10px;
+ background: #5d4bf0;
+ box-shadow: 1px 1px 40px red;
+ min-width: 10px;
+ border-radius: 50%;
+ position: absolute;
+ top:50%;
+ right: -5%;
+ 
+}
+.earth:nth-child(2){
+ height: 300px;
+ width: 300px;
+ animation: spin 13s linear infinite;
+}
+.earth:nth-child(3){
+ height: 350px;
+ width: 350px;
+ animation: spin 16s linear infinite;
+}
+.earth:nth-child(4){
+ height: 400px;
+ width: 400px;
+ animation: spin 19s linear infinite;
+}
+.earth:nth-child(5){
+ height: 450px;
+ animation: spin 21s linear infinite;
+ width: 450px;
+ 
+}
+.earth:nth-child(6){
+ animation: spin 23s linear infinite;
+ height: 500px;
+ width: 500px;
+}
+.earth:nth-child(7){
+ animation: spin 25s linear infinite;
+ height: 550px;
+ width: 550px;
+}
+.earth:nth-child(8){
+ animation: spin 28s linear infinite;
+ height: 600px;
+ width: 600px;
+}
+.earth:nth-child(9){
+ animation: spin 30s linear infinite;
+ height: 650px;
+ width: 650px;
+}
+@keyframes spin{
+ from{
+  transform: rotate(0deg);
+ }
+ to{
+  transform: rotate(360deg);
+ }
+}
